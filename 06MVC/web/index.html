@@ -13,15 +13,59 @@ and open the template in the editor.
     <body>
         <div>
            
-            <p>Deberan de modificar esta pagina y deberan de incoporar un inicio 
-            de sesion se le solicita al usuario pues un correo y una contraseña
-            para ello deberan de modificar la BD y agregar los campos correo y contraseña
-            una vez que tengan esos campos deberan de programar el metodo para iniciar
-            la sesion atraves de comparar el campo user = correo y password = contraseña
-            en caso de que los datos sean correctos lo redirecciona a consultar lista de alumnos
-            y adentro de inicio.jsp deberan de integrar ahora el link para registrar alumnos
-            en caso de que el usuario y contraseña sean invalidos los envia a la pagina de error
-            </p>
+           
+            <body>
+<h1>INICIO DE SESION
+</h1> 
+<form name="login"> 
+     <table width="200" border="0"> 
+       <tr> 
+         <th scope="row"><h2>Usuario</h2></th> 
+         <td><span class="cnt"> 
+           <input name="usuario" type="text" class="Input" value="" size="20" /> 
+         </span></td> 
+       </tr> 
+       <tr> 
+         <th height="33" scope="row"><h2>Contraseña</h2></th> 
+         <td><span class="cnt"> 
+           <input name="password" type="password" class="Input" value="" size="20" /> 
+         </span></td> 
+         <td><span class="cnt"> 
+           <input value="Entrar" target="_parent" onclick="Login()" type="button" class="boton"/> 
+         </span></td> 
+       </tr> 
+       <tr> 
+         <th scope="row"><input type="reset" name="Borrar" id="Borrar" value="Borrar" class="boton" /></th> 
+       </tr> 
+     </table> 
+</form> 
+
+<script language="JavaScript"> 
+function Login(){ 
+var done=0; 
+var usuario=document.login.usuario.value; 
+var password=document.login.password.value; 
+if (usuario=="USUARIO1" && password=="CONTRASEÑA1") { 
+window.location="TU_PAGINA_WEB.HTML"; 
+} 
+if (usuario=="USUARIO2" && password=="CONTRASEÑA2") { 
+window.location="TU_PAGINA_WEB.HTML"; 
+} 
+if (usuario=="" && password=="") { 
+window.location="errorpopup.html"; 
+} 
+if (usuario=="USUARIO" && password=="CONTRASEÑA") {
+window.location="TU_PAGINA_WEB.HTML";
+}
+} 
+        </script> 
+ 
+<script language="Javascript"> 
+<!-- Begin 
+document.oncontextmenu = function(){return false} 
+// End --> 
+</script>
+</body>
             <br>
             
             <a href="inicio.jsp" >Consultar Lista</a>
